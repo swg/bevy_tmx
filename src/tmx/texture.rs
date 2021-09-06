@@ -102,7 +102,7 @@ impl Texture {
                         },
                         TextureDimension::D2,
                         buffer.into_raw(),
-                        TextureFormat::Rgba8Unorm,
+                        TextureFormat::Rgba8UnormSrgb,
                     )),
                 )
             }
@@ -116,7 +116,7 @@ impl Texture {
                     },
                     TextureDimension::D2,
                     std::mem::take(buffer).into_raw(),
-                    TextureFormat::Rgba8Unorm,
+                    TextureFormat::Rgba8UnormSrgb,
                 )),
             ),
             Inner::Loaded { handle } => handle.clone(),
